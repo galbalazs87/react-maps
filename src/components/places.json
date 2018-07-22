@@ -1,0 +1,38 @@
+[
+    {
+      "name": "Poncsák Cukrászda",
+      "type": "Restaurant",
+      "latitude": 48.224112,
+      "longitude": 22.079787
+    },
+    {
+        "name": "Madison Pub",
+        "type": "Pub",
+        "latitude": 48.229534,
+        "longitude": 22.070029
+      },
+      {
+        "name": "Café Vya",
+        "type": "Cafe",
+        "latitude": 48.223496,
+        "longitude": 22.074208
+      },
+      {
+        "name": "Mini Söröző",
+        "type": "Pub",
+        "latitude": 48.225344,
+        "longitude": 22.085023
+      },
+      {
+        "name": "Camping Pub",
+        "type": "Pub",
+        "latitude": 48.231521,
+        "longitude": 22.067712
+      },
+      {
+        "name": "Party Étterem",
+        "type": "Restaurant",
+        "latitude": 48.224330,
+        "longitude": 22.087065
+      }
+]
