@@ -3,18 +3,18 @@ import LocationList from "./LocationList";
 
 class App extends Component {
   /**
-   * Constructor
+   * This is a contructor
    */
   constructor(props) {
     super(props);
     this.state = {
-      alllocations: require("./places.json"), // Get the locations from the JSON file
+      alllocations: require("./places.json"), // This JSON contains the locations of my choice for the map
       map: "",
       infowindow: "",
       prevmarker: ""
     };
 
-    // retain object instance when used in the function
+    // Object instance retaining when used in function
     this.initMap = this.initMap.bind(this);
     this.openInfoWindow = this.openInfoWindow.bind(this);
     this.closeInfoWindow = this.closeInfoWindow.bind(this);
@@ -26,12 +26,12 @@ class App extends Component {
     window.initMap = this.initMap;
     // Asynchronously load the Google Maps script, passing in the callback reference
     loadMapJS(
-      "https://maps.googleapis.com/maps/api/js?key=AIzaSyCrkBVRsoeJbZXjAGMRVbYF4z44_Qgkfok&callback=initMap"
+      "https://maps.googleapis.com/maps/api/js?key=AIzaSyDCvoJkqI0DRibWfcrhCy-ffe4laKHFiAY&callback=initMap"
     );
   }
 
   /**
-   * When the Google Maps script is loaded the map is initialized
+   * The map on site is initialized when the Google Maps script has been loaded
    */
   initMap() {
     var self = this;
@@ -92,7 +92,7 @@ class App extends Component {
   }
 
   /**
-   * Open the infowindow for the marker
+   * For the marker opens a little window
    * @param {object} location marker
    */
   openInfoWindow(marker) {
@@ -109,16 +109,16 @@ class App extends Component {
   }
 
   /**
-   * Retrive the location data from the foursquare api
+   * Retrieving the needed location date from the Foursquare API
    */
   getMarkerInfo(marker) {
     var self = this;
 
-    // Add the api keys for foursquare
+    // Needed API keys from Foursquare
     var clientId = "4L1Y2HLM2URA5QQ5JOAKSRKR0UJ4GR0C1N52XX2LPLFLPX5E";
     var clientSecret = "F5P3UFDCB5J0KKQ0W1TPPW0ZHWSV0L5U2Y3SCVTLOJS24NWN";
 
-    // Build the api endpoint
+    // Endpoint coded by the help of the documentation of the Foursquare API
     var url =
       "https://api.foursquare.com/v2/venues/search?client_id=" +
       clientId +
@@ -136,7 +136,7 @@ class App extends Component {
           return;
         }
 
-        // Get the text in the response
+        // Getting the response from the API
         response.json().then(function(data) {
           console.log(data);
 
@@ -165,7 +165,7 @@ class App extends Component {
   }
 
   /**
-   * Close the info window previously opened
+   * Function to close the previously opened little window
    *
    * @memberof App
    */

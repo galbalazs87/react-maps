@@ -3,7 +3,7 @@ import Place from "./Place";
 
 class LocationList extends Component {
   /**
-   * Constructor
+   * This is a constructor
    */
   constructor(props) {
     super(props);
@@ -17,7 +17,7 @@ class LocationList extends Component {
   }
 
   /**
-   * Filter Locations based on user query
+   * Function to filter the locations
    */
   filterLocations(event) {
     this.props.closeInfoWindow();
